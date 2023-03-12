@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRABAJO FINAL</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,400&display=swap" rel="stylesheet">
+    <style>
+        .carousel img{
+            height: 350px;
+        }
+    </style>
+    <script src="indexdb.js"></script>
+</head>
+<body>
+    <div class="">
+        <!-- barra de navegacion -->
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="#">Usuario</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>              
+                </ul>
+            </div>
+            </div>
+        </nav>
+        <!--FIN barra de navegacion -->
+
+        <!-- contenido -->
+        <div class="container">            
+            <button onclick="listar()" type="button" class="btn btn-success">Listar</button>                   
+            <div class="row"> 
+                <div class="col-xs-12 col-md-6" >
+                    <ul class="list-group" id="mostrarLista">                            
+                    </ul>
+                </div>
+            </div>            
+        </div>    
+    </div>
+    <script>       
+        function listar(){
+            var lista = document.getElementById("mostrarLista");
+            console.log(lista);
+            db = dbConnection.result;
+            // lectura de tablas
+            var transaccion = db.transaction("persona", "readonly");
+            const objeto = transaccion.objectStore('persona');
+            console.log(objeto);
+            // iterar los elementos
+            const cursor = objeto.openCursor();
+            cursor.onsuccess = (e) =>{
+                const c = e.target.result;
+                if (c){
+                    // insertando en el html de UL, se realizo algunas concatenaciones adicionales
+                    // lista.innerHTML += "<li class='list-group-item'>"+c.value['nombre']+"---"+c.value['apellido']+"   <button onclick='eliminar("+c.value['idPersona']+")' type='button' class='btn btn-danger'>Eliminar</button></li>"
+                    lista.innerHTML += "<li class='list-group-item'>"+c.value['nombre']+"</li>"
+                    c.continue();
+                } else {
+                    console.log("no tiene datos");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
