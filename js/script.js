@@ -1,4 +1,4 @@
-//cargo en un arreglo las imganes de las banderas. Este sera el orden que se mostrarán
+//cargo en un arreglo las imganes de las REDES SOCIALES. Este sera el orden que se mostrarán
 let banderas = ["pa.svg", "bo.svg", "ad.svg", "gb.svg", "na.svg"];
 
 //arreglo que guardara la opcion correcta
@@ -29,9 +29,9 @@ function comenzarJuego(){
 
 }
 
-//funcion que carga la siguiente bandera y sus opciones
+//funcion que carga la siguiente RED SOCIAL y sus opciones
 function cargarBandera(){
-    //controlo sis se acabaron las banderas
+    //controlo sis se acabaron las REDES SOCIALES
     if(banderas.length <= posActual){
         terminarJuego();
     }
@@ -72,7 +72,7 @@ function comprobarRespuesta(opElegida){
         document.getElementById("l" + correcta[posActual]).className = "letra letraAcertada";
     }
     posActual++;
-    //Esperamos 1 segundo y pasamos mostrar la siguiente bandera y sus opciones
+    //Esperamos 1 segundo y pasamos mostrar la siguiente RED SOCIAL y sus opciones
     setTimeout(cargarBandera,1000);
 }
 function terminarJuego(){
