@@ -4,6 +4,15 @@ h1 {
   background-color: #fafafd;
   margin: 40px auto;
   border-radius: 60px;
-  box-shadow: 5px 5px 0 #c71010;
+  box-shadow: 5px 5px 0 #1a007a;
   padding: 20px 30px;
+}
+
+@media (max-width: 400px) {
+  body {
+    background: url(../img/fondo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+  }
 }/*# sourceMappingURL=estilo.css.map */
