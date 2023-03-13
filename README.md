@@ -17,4 +17,4 @@ Reynel Orlando Villca Hurtado
 Juan Carlos Mendoza Gutiérrez
 
 ## Deploy: 
-https://reynelvillca.github.io/
+https://reynelvillca.github.io/juego/
