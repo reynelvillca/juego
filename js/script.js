@@ -1,5 +1,5 @@
-//cargo en un arreglo las imganes de las REDES SOCIALES. Este sera el orden que se mostrarán
-let Redsocial = ["pa.svg", "bo.svg", "ad.svg", "gb.svg", "na.svg"];
+//cargo en un arreglo las imganes de las banderas. Este sera el orden que se mostrarán
+let banderas = ["pa.svg", "bo.svg", "ad.svg", "gb.svg", "na.svg"];
 
 //arreglo que guardara la opcion correcta
 let correcta = [2,2,1,1,0];
@@ -25,14 +25,14 @@ function comenzarJuego(){
     //activamos las pantallas necesarias
     document.getElementById("pantalla-inicial").style.display = "none";
     document.getElementById("pantalla-juego").style.display = "block";
-    cargarRedsocial();
+    cargarBandera();
 
 }
 
-//funcion que carga la siguiente RED SOCIAL y sus opciones
-function cargarRedsocial(){
-    //controlo sis se acabaron las REDES SOCIALES
-    if(Redsocial.length <= posActual){
+//funcion que carga la siguiente bandera y sus opciones
+function cargarBandera(){
+    //controlo sis se acabaron las banderas
+    if(banderas.length <= posActual){
         terminarJuego();
     }
     else{//cargo las opciones
@@ -72,8 +72,8 @@ function comprobarRespuesta(opElegida){
         document.getElementById("l" + correcta[posActual]).className = "letra letraAcertada";
     }
     posActual++;
-    //Esperamos 1 segundo y pasamos mostrar la siguiente RED SOCIAL y sus opciones
-    setTimeout(cargarRedsocial,1000);
+    //Esperamos 1 segundo y pasamos mostrar la siguiente bandera y sus opciones
+    setTimeout(cargarBandera,1000);
 }
 function terminarJuego(){
     //ocultamos las pantallas y mostramos la pantalla final
@@ -81,7 +81,7 @@ function terminarJuego(){
     document.getElementById("pantalla-final").style.display = "block";
     //agreamos los resultados
     document.getElementById("numCorrectas").innerHTML = cantidadAcertadas;
-    document.getElementById("numIncorrectas").innerHTML = Redsocial.length - cantidadAcertadas;
+    document.getElementById("numIncorrectas").innerHTML = banderas.length - cantidadAcertadas;
 }
 
 function volverAlInicio(){
