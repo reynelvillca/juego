@@ -4,6 +4,14 @@ let banderas = ["1delfin.svg","2python.svg", "3basedatos.svg", "4logo-javascript
 //arreglo que guardara la opcion correcta
 let correcta = [0,2,2,1,0,1];
 
+//ARREGLO PREGUNTAS
+let preguntass= [];
+preguntass.push(["¿A cuál de los siguientes identifica el Delfin?"]);
+preguntass.push(["El siguiente icono representa a:"]);
+preguntass.push(["El siguiente icono representa a:"]);
+preguntass.push(["pregunta4"]);
+preguntass.push(["pregunta5"]);
+preguntass.push(["pregunta6"]);
 //arreglo que guardara los paises a mostrar en cada jugada
 let opciones = [];
 //cargo en el arreglo opciones las opciones a mostrar en cada jugada
@@ -39,6 +47,10 @@ function cargarBandera(){
     else{//cargo las opciones
         //limpiamos las clases que se asignaron
         limpiarOpciones();
+
+
+        let ul = document.getElementById("preg");//PREGUNTAS
+        ul.innerHTML = preguntass[posActual];//PREGUNTAS
 
         document.getElementById("imgBandera").src = "img/" + banderas[posActual];
         document.getElementById("n0").innerHTML = opciones[posActual][0];
