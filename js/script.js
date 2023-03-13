@@ -1,21 +1,23 @@
-//cargo en un arreglo las imganes de las banderas. Este sera el orden que se mostrarán
-let banderas = ["1delfin.svg","2python.svg", "3basedatos.svg", "4logo-javascript.svg", "5angular-icon-1.svg", "6django.svg" ];
+//cargo en un arreglo de las imagenes de los logos de tecnologia. 
+//Este sera el orden que se mostrarán
+let logos = ["1delfin.svg","2python.svg", "3basedatos.svg", "4logo-javascript.svg", "5angular-icon-1.svg", "6django.svg" ];
 
 //arreglo que guardara la opcion correcta
 let correcta = [0,2,2,1,0,1];
 
 //ARREGLO PREGUNTAS
-let preguntass= [];
-preguntass.push(["¿A cuál de los siguientes identifica el Delfin?"]);
-preguntass.push(["¿Que lenguaje de programación es?"]);
-preguntass.push(["El siguiente icono representa a:"]);
-preguntass.push(["¿La abreviatura siguiente significa?"]);
-preguntass.push(["¿Cúal es el nombre de dicho FrameWork?"]);
-preguntass.push(["Es un framework de desarrollo para Python"]);
-//arreglo que guardara los paises a mostrar en cada jugada
+let preguntas= [];
+preguntas.push(["¿A cuál de los siguientes identifica el Delfin?"]);
+preguntas.push(["¿Que lenguaje de programación es?"]);
+preguntas.push(["El siguiente icono representa a:"]);
+preguntas.push(["¿La abreviatura siguiente significa?"]);
+preguntas.push(["¿Cúal es el nombre de dicho FrameWork?"]);
+preguntas.push(["Es un framework de desarrollo para Python"]);
+
+//arreglo que guardara las tecnologias a mostrar en cada jugada
 let opciones = [];
 //cargo en el arreglo opciones las opciones a mostrar en cada jugada
-opciones.push(["MySQL", "PHP", "APACHE"]);
+opciones.push(["MySQL", "MariaDB", "SQLServer"]);
 opciones.push(["PHP", "C++","PYTHON"]);
 opciones.push(["CRIPTOMONEDAS", "PAYPAL","BASE DE DATOS"]);
 opciones.push(["JASON", "JAVASCRIPT", "JALA SOFT"]);
@@ -34,25 +36,22 @@ function comenzarJuego(){
     //activamos las pantallas necesarias
     document.getElementById("pantalla-inicial").style.display = "none";
     document.getElementById("pantalla-juego").style.display = "block";
-    cargarBandera();
-
+    cargarLogos();
 }
 
-//funcion que carga la siguiente bandera y sus opciones
-function cargarBandera(){
-    //controlo sis se acabaron las banderas
-    if(banderas.length <= posActual){
+//funcion que carga los siguientes logos  y sus opciones
+function cargarLogos(){
+    //controlo si se acabaron las logos
+    if(logos.length <= posActual){
         terminarJuego();
-    }
-    else{//cargo las opciones
-        //limpiamos las clases que se asignaron
+    }else{
+        //cargo las opciones y limpiamos las clases(CSS) que se asignaron
         limpiarOpciones();
 
-
         let ul = document.getElementById("preg");//PREGUNTAS
-        ul.innerHTML = preguntass[posActual];//PREGUNTAS
-
-        document.getElementById("imgBandera").src = "img/" + banderas[posActual];
+        ul.innerHTML = preguntas[posActual];//PREGUNTAS
+        document.getElementById("imgLogos").src = "img/" + logos[posActual];//IMAGEN
+        
         document.getElementById("n0").innerHTML = opciones[posActual][0];
         document.getElementById("n1").innerHTML = opciones[posActual][1];
         document.getElementById("n2").innerHTML = opciones[posActual][2];
@@ -85,8 +84,8 @@ function comprobarRespuesta(opElegida){
         document.getElementById("l" + correcta[posActual]).className = "letra letraAcertada";
     }
     posActual++;
-    //Esperamos 1 segundo y pasamos mostrar la siguiente bandera y sus opciones
-    setTimeout(cargarBandera,1000);
+    //Esperamos 1 segundo y pasamos mostrar el siguiente logo y sus opciones
+    setTimeout(cargarLogos,1000);
 }
 function terminarJuego(){
     //ocultamos las pantallas y mostramos la pantalla final
@@ -94,7 +93,7 @@ function terminarJuego(){
     document.getElementById("pantalla-final").style.display = "block";
     //agreamos los resultados
     document.getElementById("numCorrectas").innerHTML = cantidadAcertadas;
-    document.getElementById("numIncorrectas").innerHTML = banderas.length - cantidadAcertadas;
+    document.getElementById("numIncorrectas").innerHTML = logos.length - cantidadAcertadas;
 }
 
 function volverAlInicio(){
