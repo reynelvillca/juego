@@ -5,7 +5,7 @@
 }
 html {
     font-size: 62.5%;
-    box-sizing: border-box; /* Hack para Box Model **/
+    box-sizing: border-box; 
     scroll-snap-type: y mandatory;
 }
 /*body{    
@@ -83,7 +83,7 @@ footer{
     text-align: center;
 }
 .pantalla-juego img{
-    max-width: 400px;
+    max-width: 200px;
     width: 100%;
 }
 .opciones{

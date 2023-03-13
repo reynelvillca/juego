@@ -1,8 +1,8 @@
-$color-1: #c71010;
-$color-2: #f6fa0b;
+$color-1: darkred;
+$color-2: yellowgreen;
 $color-3: #005813;
 $color-4: #1a007a;
-$color-5: #fafafd;
+$color-5: #fff;
 
 h1{
     width: fit-content;
@@ -12,9 +12,25 @@ h1{
     box-shadow: 5px 5px 0 $color-4;
     padding: 20px 30px;
 }
+.opcion .nombreAcertada{
+    background-color:$color-2;
+    color: $color-5;
+}
+.opcion .letraAcertada{
+    background-color:$color-2;
+    color: $color-5 ;
+}
+/* clases que se aplicaran cuando se equivoque en la opcion elegida */
+.opcion .nombreNoAcertada{
+    background-color:$color-1;
+    color: $color-5;
+}
+.opcion .letraNoAcertada{
+    background-color:$color-1;
+    color: $color-5;
+}
 
-
-@media (max-width: 400px) {
+@media (max-width: 700px) {
     body{    
         background: url(../img/fondo.jpg);
         background-size: cover;
