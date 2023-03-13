@@ -156,3 +156,9 @@ footer{
     border-radius: 50%;
     border: 5px solid #fff;
 }
+@media (min-width: 1400px) {
+    body{    
+        background: url(../img/fondo2.jpg);
+      
+    }
+  }

@@ -12,9 +12,9 @@ Creacion de Juego
 * Erik Vladimir Huallpa Aruquipa 
 
 ## Presidente: 
-Juan Carlos Mendoza Gutiérrez
-## Secretario: 
 Reynel Orlando Villca Hurtado
+## Secretario: 
+Juan Carlos Mendoza Gutiérrez
 
 ## Deploy: 
 https://reynelvillca.github.io/
