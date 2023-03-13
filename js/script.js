@@ -9,9 +9,9 @@ let preguntass= [];
 preguntass.push(["¿A cuál de los siguientes identifica el Delfin?"]);
 preguntass.push(["¿Que lenguaje de programación es?"]);
 preguntass.push(["El siguiente icono representa a:"]);
-preguntass.push(["pregunta4"]);
-preguntass.push(["pregunta5"]);
-preguntass.push(["pregunta6"]);
+preguntass.push(["¿La abreviatura siguiente significa?"]);
+preguntass.push(["¿Cúal es el nombre de dicho FrameWork?"]);
+preguntass.push(["Es un framework de desarrollo para Python"]);
 //arreglo que guardara los paises a mostrar en cada jugada
 let opciones = [];
 //cargo en el arreglo opciones las opciones a mostrar en cada jugada
