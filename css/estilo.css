@@ -3,11 +3,22 @@
     box-sizing: border-box;
     font-family: 'Mochiy Pop One';
 }
-body{    
+html {
+    font-size: 62.5%;
+    box-sizing: border-box; /* Hack para Box Model **/
+    scroll-snap-type: y mandatory;
+}
+/*body{    
     background: url(../img/fondo.jpg);
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
+}*/
+
+body {
+    font-size: 16px; /* 1rem = 10px */
+    font-family: 'Krub', sans-serif;
+    background-image: url(../img/fondo.jpg);
 }
 h1{
     width: fit-content;
@@ -16,7 +27,15 @@ h1{
     border-radius: 60px;
     box-shadow: 5px 5px 0 #000;
     padding: 20px 30px;
+
 }
+
+.centrear-texto{
+    
+    display: block;
+    text-align: center;
+
+    }
 footer{
     position: absolute;
     bottom: 0;
@@ -59,7 +78,7 @@ footer{
     display: none;
 }
 .pantalla-juego{
-    max-width: 800px;
+    max-width: 120rem; /*800 px*/
     margin: 50px auto;
     text-align: center;
 }
