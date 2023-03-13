@@ -1,8 +1,8 @@
 
 # GRUPO 4 - ChatGPT
 
-# Pagina-Bosstrap
-Creacion de Juego
+# Creacion de Juego
+Realizar un Game con HTML, CSS y JS
 
 ## Integrantes: 🚀
 
