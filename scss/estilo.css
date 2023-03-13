@@ -38,9 +38,4 @@ h1 {
   body {
     background: url(../img/fondo.jpg);
   }
-}
-@media (min-width: 1400px) {
-  body {
-    background: url(../img/fondo2.jpg);
-  }
 }/*# sourceMappingURL=estilo.css.map */
