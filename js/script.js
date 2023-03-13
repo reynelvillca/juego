@@ -7,7 +7,7 @@ let correcta = [0,2,2,1,0,1];
 //ARREGLO PREGUNTAS
 let preguntass= [];
 preguntass.push(["¿A cuál de los siguientes identifica el Delfin?"]);
-preguntass.push(["El siguiente icono representa a:"]);
+preguntass.push(["¿Que lenguaje de programación es?"]);
 preguntass.push(["El siguiente icono representa a:"]);
 preguntass.push(["pregunta4"]);
 preguntass.push(["pregunta5"]);
