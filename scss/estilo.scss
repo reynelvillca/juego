@@ -1,0 +1,14 @@
+$color-1: #c71010;
+$color-2: #f6fa0b;
+$color-3: #005813;
+$color-4: #1a007a;
+$color-5: #fafafd;
+
+h1{
+    width: fit-content;
+    background-color: $color-5;
+    margin: 40px auto;
+    border-radius: 60px;
+    box-shadow: 5px 5px 0 $color-1;
+    padding: 20px 30px;
+}
