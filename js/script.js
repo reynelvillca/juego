@@ -1,13 +1,13 @@
 //cargo en un arreglo las imganes de las banderas. Este sera el orden que se mostrarán
-let banderas = ["pa.svg", "bo.svg", "ad.svg", "gb.svg", "na.svg"];
+let banderas = ["python.svg", "bo.svg", "ad.svg", "gb.svg", "na.svg"];
 
 //arreglo que guardara la opcion correcta
-let correcta = [2,2,1,1,0];
+let correcta = [0,2,1,1,0];
 
 //arreglo que guardara los paises a mostrar en cada jugada
 let opciones = [];
 //cargo en el arreglo opciones las opciones a mostrar en cada jugada
-opciones.push(["SUDAFRICA", "SINGAPUR", "PANAMA"]);
+opciones.push(["PYTHON", "JAVASCRIPT", "HTML"]);
 opciones.push(["PERU", "ITALIA", "BOLIVIA"]);
 opciones.push(["TUNEZ", "ANDORRA", "ANTIGUA Y BARBUDA"]);
 opciones.push(["UCRANIA", "REINO UNIDO", "MADAGASCAR"]);
