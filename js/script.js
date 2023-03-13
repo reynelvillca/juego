@@ -1,8 +1,8 @@
 //cargo en un arreglo las imganes de las banderas. Este sera el orden que se mostrarán
-let banderas = ["1delfin.svg","2python.svg", "3basedatos.svg", "gb.svg", "na.svg"];
+let banderas = ["1delfin.svg","2python.svg", "3basedatos.svg", "4logo-javascript.svg", "5angular-icon-1.svg", "6django.svg" ];
 
 //arreglo que guardara la opcion correcta
-let correcta = [0,2,2,1,0];
+let correcta = [0,2,2,1,0,1];
 
 //arreglo que guardara los paises a mostrar en cada jugada
 let opciones = [];
@@ -10,8 +10,9 @@ let opciones = [];
 opciones.push(["MySQL", "PHP", "APACHE"]);
 opciones.push(["PHP", "C++","PYTHON"]);
 opciones.push(["CRIPTOMONEDAS", "PAYPAL","BASE DE DATOS"]);
-opciones.push(["UCRANIA", "REINO UNIDO", "MADAGASCAR"]);
-opciones.push(["NAMIBIA", "OMAN", "ETIOPIA"]);
+opciones.push(["JASON", "JAVASCRIPT", "JALA SOFT"]);
+opciones.push(["ANGULAR", "ANGULO", "AGUDO"]);
+opciones.push(["DJAVIER", "DJANGO", "DJEASY"]);
 
 //variable que guarda la posicion actual
 let posActual = 0;
